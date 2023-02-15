@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_xhdpi"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+ <ImageButton
+     android:id="@+id/menuIcon"
+     android:layout_width="66dp"
+     android:layout_height="69dp"
+     android:layout_marginTop="10dp"
+     android:layout_marginLeft="10dp"
+     android:src="@drawable/logo2"
+     android:background="@android:color/transparent"/>
+
+    <TextView
+        android:id="@+id/comparaison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#E9967A"
+        android:gravity="center"
+        android:layout_marginTop="90sp"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+/>
+ <LinearLayout
+     android:layout_width="360dp"
+     android:layout_height="55dp"
+     android:layout_centerInParent="true"
+     android:layout_centerHorizontal="true"
+     android:orientation="horizontal"
+     android:layout_marginTop="20dp"
+     android:id="@+id/montant"
+     android:layout_below="@id/comparaison">
+
+<Spinner
+    android:id="@+id/saisie_pays"
+    android:layout_width="100dp"
+    android:layout_height="match_parent" />
+
+  <EditText
+      android:id="@+id/saisie"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:inputType="numberDecimal"
+      android:hint="Saisir le montant" />
+
+
+
+
+
+
+</LinearLayout>
+
+    <ImageButton
+        android:id="@+id/convertir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/montant"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/convertir"
+        android:background="@android:color/transparent"/>
+
+    <ImageButton
+     android:id="@+id/transposer"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_below="@id/convertir"
+     android:layout_marginTop="45dp"
+     android:layout_centerHorizontal="true"
+     android:src="@drawable/transpose"
+        android:background="@android:color/transparent"/>
+
+
+ <!-- Résultat 1 -->
+ <LinearLayout
+     android:id="@+id/result1"
+     android:layout_width="360dp"
+     android:layout_height="55dp"
+     android:layout_below="@id/transposer"
+     android:layout_centerHorizontal="true"
+     android:layout_marginTop="22dp"
+     android:orientation="horizontal">
+
+     <Spinner
+         android:id="@+id/spin1"
+         android:layout_width="100dp"
+         android:layout_height="match_parent"
+
+         />
+
+     <TextView
+         android:id="@+id/pays_result1"
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:hint="Résultat"
+         android:padding="10dp"
+         android:gravity="center_vertical"
+         android:textSize="20dp"/>
+
+ </LinearLayout>
+
+ <!-- Bouton Ajouter un pays 1 -->
+
+ <LinearLayout
+     android:layout_width="360dp"
+     android:id="@+id/ajout_devise"
+     android:layout_height="55dp"
+     android:layout_centerHorizontal="true"
+     android:layout_below="@id/result1"
+     android:layout_marginTop="60dp"
+     android:gravity="center">
+
+     <ImageButton
+         android:layout_width="100dp"
+         android:id="@+id/bouton_plus"
+         android:layout_height="match_parent"
+         android:src="@drawable/bouton_plus"
+         android:background="@android:color/transparent"/>
+
+  <TextView
+      android:id="@+id/text_ajout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:hint="Ajouter une devise"
+      android:textSize="20dp"
+      android:padding="10dp"
+      />
+
+ </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/result2"
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/result1"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spin2"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+
+            />
+
+        <TextView
+            android:id="@+id/pays_result2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Résultat"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/result3"
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/result2"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spin3"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+
+            />
+
+        <TextView
+            android:id="@+id/pays_result3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Résultat"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:id="@+id/ajout_devise2"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ajout_devise"
+        android:layout_marginTop="60dp"
+        android:gravity="center">
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:id="@+id/bouton_plus2"
+        android:layout_height="match_parent"
+        android:src="@drawable/bouton_plus"
+        android:background="?android:selectableItemBackground"
+        />
+
+    <TextView
+        android:id="@+id/text_ajout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Ajouter une devise"
+        android:textSize="20dp"
+        android:padding="10dp"
+        />
+
+    </LinearLayout>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="800dp"
+    android:hint="© 2022-2023 Nahmo inc. | All rights reserved"
+    />
+
+
+
+</RelativeLayout>
